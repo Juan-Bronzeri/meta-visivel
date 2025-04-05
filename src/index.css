@@ -1,0 +1,6 @@
+/* Adicionar esta regra para sobrescrever o estilo padrão do AntD */
+.ant-layout-sider-trigger {
+  background: transparent !important;
+}
+
+/* Estilos existentes em index.css (se houver) devem permanecer abaixo */ 

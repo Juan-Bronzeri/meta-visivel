@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-    Card,
-    Avatar,
-    Typography,
-    Image,
-    Space,
-    Button,
-} from 'antd';
+import { Card, Avatar, Typography, Image, Space, Button } from 'antd';
 import {
     HeartOutlined,
     MessageOutlined,
@@ -14,6 +7,7 @@ import {
     BookOutlined,
     MoreOutlined,
 } from '@ant-design/icons';
+// Importar os estilos CSS Modules
 import styles from './AzulelePage.module.css';
 
 const { Text, Link } = Typography;
@@ -47,14 +41,16 @@ const AzulelePage: React.FC = () => {
         <div className={styles.pageContainer}>
             {/* Barra de Stories */}
             <div className={styles.storiesBar}>
-                <Space size="middle">
+                <Space size='middle'>
                     {storiesData.map((story, index) => (
                         <div key={index} className={styles.storyItem}>
                             <div className={styles.storyAvatarBorder}>
                                 <Avatar src={story.avatar} size={56} />
                             </div>
-                            <Text className={styles.storyUsername}
-                                  ellipsis={{ tooltip: story.username }}>
+                            <Text
+                                className={styles.storyUsername}
+                                ellipsis={{ tooltip: story.username }}
+                            >
                                 {story.username}
                             </Text>
                         </div>
@@ -66,30 +62,42 @@ const AzulelePage: React.FC = () => {
             <Card className={styles.postCard}>
                 {/* Cabeçalho do Post */}
                 <div className={styles.postHeader}>
-                    <Space align="center">
-                        <Avatar src={postData.userAvatar} size="small" />
+                    <Space align='center'>
+                        <Avatar src={postData.userAvatar} size='small' />
                         <Text strong>{postData.username}</Text>
-                        <Text type="secondary">• {postData.postTime}</Text>
+                        <Text type='secondary'>• {postData.postTime}</Text>
                     </Space>
-                    <Button type="text" icon={<MoreOutlined />} />
+                    <Button type='text' icon={<MoreOutlined />} />
                 </div>
 
                 {/* Imagem do Post */}
                 <Image
                     wrapperClassName={styles.postImageWrapper}
                     src={postData.imageUrl}
-                    alt="Post image"
+                    alt='Post image'
                     preview={false} // Desabilitar preview do AntD
                 />
 
                 {/* Ações (Like, Comment, Share, Save) */}
                 <div className={styles.postActions}>
-                    <Space size="middle">
-                        <Button type="text" size="large" icon={<HeartOutlined />} />
-                        <Button type="text" size="large" icon={<MessageOutlined />} />
-                        <Button type="text" size="large" icon={<SendOutlined />} />
+                    <Space size='middle'>
+                        <Button
+                            type='text'
+                            size='large'
+                            icon={<HeartOutlined />}
+                        />
+                        <Button
+                            type='text'
+                            size='large'
+                            icon={<MessageOutlined />}
+                        />
+                        <Button
+                            type='text'
+                            size='large'
+                            icon={<SendOutlined />}
+                        />
                     </Space>
-                    <Button type="text" size="large" icon={<BookOutlined />} />
+                    <Button type='text' size='large' icon={<BookOutlined />} />
                 </div>
 
                 {/* Informações de Likes */}
@@ -101,13 +109,14 @@ const AzulelePage: React.FC = () => {
 
                 {/* Comentários (Placeholder) */}
                 <div className={styles.postComments}>
-                    <Link href="#">View all {postData.commentCount} comments</Link>
-                    <Text type="secondary">Add a comment...</Text>
+                    <Link href='#'>
+                        View all {postData.commentCount} comments
+                    </Link>
+                    <Text type='secondary'>Add a comment...</Text>
                 </div>
             </Card>
-
         </div>
     );
 };
 
-export default AzulelePage; 
+export default AzulelePage;
