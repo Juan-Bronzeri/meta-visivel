@@ -1,41 +1,44 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Dependências
+node_modules/
+backend/node_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# Arquivos de Build/Produção (se houver)
+dist/
+build/
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
 
-# vercel
-.vercel
+# Arquivos de ambiente (Contêm segredos!)
+.env
+.env*.local
+.env.*.local
+!.env.example
+!.env.sample
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Banco de dados SQLite (Não envie o banco em si)
+backend/database.db
+backend/database.db-journal # Arquivo temporário do SQLite
+
+# Arquivos do Editor/IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cache de teste
+coverage/
+.nyc_output/

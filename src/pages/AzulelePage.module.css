@@ -1,0 +1,141 @@
+/* Estilos para AzulelePage.module.css */
+
+.pageContainer {
+    display: flex;
+    flex-direction: column; /* Organiza stories e post verticalmente */
+    align-items: center; /* Centraliza o post na página */
+    padding: 20px; /* Restaurar padding lateral */
+    /* background-color: #000000; */ /* Remover fundo preto, usa tema */
+    /* min-height já vem do layout principal */
+}
+
+.postCard {
+    width: 100%;
+    max-width: 470px; /* Largura similar ao Instagram */
+    border: 1px solid #e8e8e8 !important; /* Borda do tema */
+    border-radius: 6px !important; /* Raio do tema */
+    background-color: #ffffff !important;
+    /* margin-top: 20px; */ /* Margin já vem do storiesBar */
+}
+
+/* Remove padding interno padrão do Card do AntD */
+:global(.ant-card-body).postCard {
+    padding: 0 !important;
+}
+
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+}
+
+/* Cores de texto seguem padrão do tema (base #333, secondary #666) */
+.postHeader :global(.ant-typography-secondary) {
+    color: #999999 !important; /* Usar cinza terciário para timestamp */
+}
+
+.postHeader :global(.ant-typography strong) {
+    color: #333333 !important;
+}
+
+.postImageWrapper :global(.ant-image) {
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.postActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px 4px 16px; /* Padding ajustado */
+}
+
+/* Ajuste no tamanho e padding dos ícones de ação */
+.postActions :global(.ant-btn-icon-only.ant-btn-lg) {
+    font-size: 24px;
+    padding: 0 4px;
+    color: #333333 !important; /* Cor base para ícones */
+}
+
+.postLikes {
+    padding: 0 16px 8px 16px;
+    font-size: 14px;
+}
+
+.postLikes :global(.ant-typography strong) {
+    font-weight: 600; /* Fonte mais forte para likes */
+    color: #333333 !important; /* Forçar cor escura */
+}
+
+.postComments {
+    padding: 0 16px 12px 16px;
+    display: flex;
+    flex-direction: column; /* Organiza links e texto */
+    gap: 4px; /* Espaço entre link e texto */
+}
+
+/* Link e placeholder usam cores secundária/terciária do tema */
+.postComments :global(.ant-typography-link) {
+    color: #666666 !important; /* Forçar cor escura */
+    font-size: 14px;
+}
+
+.postComments :global(.ant-typography-secondary) {
+    font-size: 14px;
+    color: #999999 !important; /* Forçar cor escura */
+}
+
+/* Estilos para a Barra de Stories */
+.storiesBar {
+    width: 100%;
+    max-width: 600px; /* Pode ser um pouco mais larga que o post */
+    background-color: #ffffff !important; /* Fundo branco */
+    border: 1px solid #e8e8e8 !important; /* Borda do tema */
+    border-radius: 6px; /* Raio do tema */
+    padding: 16px;
+    margin-bottom: 24px; /* Espaço antes do post */
+    overflow-x: auto; /* Permite rolagem horizontal */
+    white-space: nowrap; /* Impede que os itens quebrem linha */
+}
+
+/* Remove a barra de rolagem visual padrão, mantendo a funcionalidade */
+.storiesBar::-webkit-scrollbar {
+    display: none;
+}
+.storiesBar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+
+.storyItem {
+    display: inline-flex; /* Usa inline-flex para alinhar avatar e texto */
+    flex-direction: column;
+    align-items: center;
+    width: 80px; /* Largura fixa para cada story */
+    text-align: center;
+    vertical-align: top; /* Alinha itens pelo topo se houver scroll */
+}
+
+.storyAvatarBorder {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    padding: 3px; /* Espaço para a borda */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); /* Gradiente similar ao Insta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.storyUsername {
+    font-size: 12px;
+    color: #666666 !important; /* Forçar cor escura para contraste com fundo branco */
+    width: 100%; /* Garante que o ellipsis funcione */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* TODO: Estilos para a barra de stories */ 

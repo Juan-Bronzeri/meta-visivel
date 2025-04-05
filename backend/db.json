@@ -1,0 +1,43 @@
+{
+  "visaoGeral": {
+    "contasPagar": {
+      "valor": 5315.00,
+      "percentual": 70
+    },
+    "contasReceber": {
+      "valor": 6400.00,
+      "percentual": 85
+    },
+    "proximasContasPagar": [
+      {
+        "id": "1",
+        "dueInfo": "21/10",
+        "description": "Aluguel",
+        "amount": 1200.00,
+        "warning": true
+      },
+      {
+        "id": "2",
+        "dueInfo": "25/10",
+        "description": "TV a Cabo",
+        "amount": 115.00,
+        "warning": false
+      }
+    ],
+    "saldoContas": [
+      { "id": "1", "name": "Poupança", "amount": 8500.00 },
+      { "id": "2", "name": "Carteira", "amount": 4931.00 }
+    ],
+    "maioresDespesas": [
+      { "id": "1", "name": "Moradia", "amount": 470.00, "percent": 80 },
+      { "id": "2", "name": "Alimentação", "amount": 230.00, "percent": 50 },
+      { "id": "3", "name": "Outras Despesas", "amount": 200.00, "percent": 40 }
+    ],
+    "ultimasDespesas": [
+      { "id": "1", "icon": "ShoppingCartOutlined", "category": "Mercado", "description": "Compra semanal", "amount": 150.75 },
+      { "id": "2", "icon": "ArrowDownOutlined", "category": "Transporte", "description": "Uber", "amount": 25.50 },
+      { "id": "3", "icon": "ShoppingCartOutlined", "category": "Lazer", "description": "Cinema", "amount": 60.00 },
+      { "id": "4", "icon": "ArrowDownOutlined", "category": "Alimentação", "description": "Almoço", "amount": 35.00 }
+    ]
+  }
+} 
